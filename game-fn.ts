@@ -9,16 +9,24 @@ const moves = [];
 // Start at A (0,0) -> [row][col]
 let row = 0;
 let col = 0;
-moves.push(board[row][col]); // A
+moves.push(board[row][col]);
 
 // Define movement functions
-function moveRight() {}
+function moveRight() {
+moves.push(board[row][++col]);
+}
 
-function moveLeft() {}
+function moveLeft() {
+moves.push(board[row][--col]);
+}
 
-function moveUp() {}
+function moveUp() {
+moves.push(board[--row][col]);
+}
 
-function moveDown() {}
+function moveDown() {
+moves.push(board[++row][col]);
+}
 
 // Call the movement functions
 moveRight(); // Move from A to B
